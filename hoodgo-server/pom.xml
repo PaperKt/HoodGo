@@ -13,7 +13,7 @@
 
         <dependency>
             <groupId>cn.ayuan</groupId>
-            <artifactId>HoodGo</artifactId>
+            <artifactId>hoodgo-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
