@@ -12,6 +12,10 @@ spring:
       url: jdbc:mysql://${hoodgo.datasource.host}:${hoodgo.datasource.port}/${hoodgo.datasource.database}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
       username: ${hoodgo.datasource.username}
       password: ${hoodgo.datasource.password}
+    redis:
+      host: ${hoodgo.redis.host}
+      port: ${hoodgo.redis.port}
+      database: ${hoodgo.redis.database}
 
 mybatis:
   #mapper配置文件
@@ -25,7 +29,7 @@ mybatis:
 logging:
   level:
     com:
-      sky:
+      hoodgo:
         mapper: debug
         service: info
         controller: info
@@ -38,3 +42,10 @@ hoodgo:
     admin-ttl: 7200000
     # 设置前端传递过来的令牌名称
     admin-token-name: token
+  alioss:
+    endpoint: ${hoodgo.alioss.endpoint}
+    access-key-id: ${hoodgo.alioss.access-key-id}
+    access-key-secret: ${hoodgo.alioss.access-key-secret}
+    bucket-name: ${hoodgo.alioss.bucket-name}
+
+
