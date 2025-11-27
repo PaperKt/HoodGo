@@ -42,6 +42,14 @@ hoodgo:
     admin-ttl: 7200000
     # 设置前端传递过来的令牌名称
     admin-token-name: token
+    user-secret-key: hustcs
+    user-token-name: authentication
+    user-ttl: 7200000
+
+  wechat:
+    appid: ${hoodgo.wechat.appid}
+    secret: ${hoodgo.wechat.secret}
+
   alioss:
     endpoint: ${hoodgo.alioss.endpoint}
     access-key-id: ${hoodgo.alioss.access-key-id}

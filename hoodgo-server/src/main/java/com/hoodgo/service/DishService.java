@@ -2,6 +2,7 @@ package com.hoodgo.service;
 
 import com.hoodgo.dto.DishDTO;
 import com.hoodgo.dto.DishPageQueryDTO;
+import com.hoodgo.entity.Dish;
 import com.hoodgo.result.PageResult;
 import com.hoodgo.vo.DishVO;
 
@@ -19,4 +20,9 @@ public interface DishService {
     DishVO getByIdWithFlavor(Long id);
 
     void updateWithFlavor(DishDTO dishDTO);
+
+    List<DishVO> listWithFlavor(Dish dish);
+
+    List<Dish> list(Long categoryId);
+
 }

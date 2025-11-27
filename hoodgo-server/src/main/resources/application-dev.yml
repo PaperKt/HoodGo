@@ -8,6 +8,11 @@ hoodgo:
     password: 123456
 
 
+
+  wechat:
+    appid:
+    secret:
+
   alioss:
     endpoint:
     access-key-id:

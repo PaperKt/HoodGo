@@ -1,5 +1,10 @@
 package com.hoodgo.mapper;
 
+import com.hoodgo.annotation.AutoFill;
+import com.hoodgo.entity.SetmealDish;
+import com.hoodgo.enumeration.OperationType;
+import com.hoodgo.vo.DishItemVO;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
@@ -10,5 +15,22 @@ public interface SetmealDishMapper {
 
 
      List<Long> getSetmealIdsByDishIds(List<Long> ids);
+    /**
+     * 根据套餐id查询菜品选项
+     * @param setmealId
+     * @return
+     */
+    @Select("select sd.name, sd.copies, d.image, d.description " +
+            "from setmeal_dish sd left join dish d on sd.dish_id = d.id " +
+            "where sd.setmeal_id = #{setmealId}")
+    List<DishItemVO> getDishItemBySetmealId(Long setmealId);
 
+    @AutoFill(OperationType.INSERT)
+    void insertBatch(List<SetmealDish> setmealDishes);
+
+    @Delete("delete from setmeal_dish where setmeal_id = #{setmealId}")
+    void deleteBySetmealId(Long setmealId);
+
+    @Select("select * from setmeal_dish where setmeal_id = #{setmealId}")
+    List<SetmealDish> getBySetmealId(Long setmealId);
 }

@@ -3,6 +3,7 @@ package com.hoodgo.controller.admin;
 
 import com.hoodgo.dto.DishDTO;
 import com.hoodgo.dto.DishPageQueryDTO;
+import com.hoodgo.entity.Dish;
 import com.hoodgo.result.PageResult;
 import com.hoodgo.result.Result;
 import com.hoodgo.service.DishService;
@@ -82,5 +83,12 @@ public class DishController {
         log.info("修改菜品：{}", dishDTO);
         dishService.updateWithFlavor(dishDTO);
         return Result.success();
+    }
+
+    @GetMapping("/list")
+    @ApiOperation("根据分类id查询菜品")
+    public Result<List<Dish>> list(Long categoryId){
+        List<Dish> list = dishService.list(categoryId);
+        return Result.success(list);
     }
 }
