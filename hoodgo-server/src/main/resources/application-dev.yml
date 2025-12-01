@@ -7,16 +7,16 @@ hoodgo:
     username: root
     password: 123456
 
-
   alioss:
     endpoint:
-    access-key-id: L
+    access-key-id:
     access-key-secret:
     bucket-name:
 
   wechat:
     appid:
     secret:
+
 
   redis:
     host: localhost
