@@ -25,4 +25,5 @@ public interface DishService {
 
     List<Dish> list(Long categoryId);
 
+    void startOrStop(Integer status, Long id);
 }

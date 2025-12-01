@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.cache.annotation.Cacheable;
+
 import java.util.List;
 
 @RestController("userCategoryController")
@@ -25,6 +27,7 @@ public class CategoryController {
      * @return
      */
     @GetMapping("/list")
+    @Cacheable(cacheNames = "categoryCache")
     @ApiOperation("查询分类")
     public Result<List<Category>> list(Integer type) {
         List<Category> list = categoryService.list(type);
