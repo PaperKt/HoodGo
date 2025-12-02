@@ -49,6 +49,13 @@ hoodgo:
   wechat:
     appid: ${hoodgo.wechat.appid}
     secret: ${hoodgo.wechat.secret}
+    mchid: ${hoodgo.wechat.mchid}
+    mchSerialNo: ${hoodgo.wechat.mchSerialNo}
+    privateKeyFilePath: ${hoodgo.wechat.privateKeyFilePath}
+    apiV3Key: ${hoodgo.wechat.apiV3Key}
+    weChatPayCertFilePath: ${hoodgo.wechat.weChatPayCertFilePath}
+    notifyUrl: ${hoodgo.wechat.notifyUrl}
+    refundNotifyUrl: ${hoodgo.wechat.refundNotifyUrl}
 
   alioss:
     endpoint: ${hoodgo.alioss.endpoint}
