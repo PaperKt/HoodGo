@@ -24,6 +24,12 @@ hoodgo:
     notifyUrl:
     refundNotifyUrl:
 
+  tencent:
+    map:
+      key:
+      shop-address:
+      delivery-radius-meter: 5000   # 配送半径，单位：米
+
 
   redis:
     host: localhost

@@ -57,6 +57,12 @@ hoodgo:
     notifyUrl: ${hoodgo.wechat.notifyUrl}
     refundNotifyUrl: ${hoodgo.wechat.refundNotifyUrl}
 
+  tencent:
+    map:
+      key: ${hoodgo.tencent.map.key}
+      shop-address: ${hoodgo.tencent.map.shop-address}
+      delivery-radius-meter: ${hoodgo.tencent.map.delivery-radius-meter}
+
   alioss:
     endpoint: ${hoodgo.alioss.endpoint}
     access-key-id: ${hoodgo.alioss.access-key-id}
